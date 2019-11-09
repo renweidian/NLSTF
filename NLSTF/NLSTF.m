@@ -124,7 +124,7 @@ end
          ph=F*phi;
 
       
-       %ѵ���ֵ�phi1
+       %ÑµÁ·×Öµäphi1
           BB=predenoised_blocks(:,:,:,gg);
       cc=Unfold(BB,size(BB),1);
    cc=unique(cc','rows');
@@ -136,7 +136,7 @@ end
  par.K=min(para.W,nn);
 phi1  =    Nonnegative_DL( D, par );
        
-          %ѵ���ֵ�phi2
+          %ÑµÁ·×Öµäphi2
            
       cc=Unfold(BB,size(BB),2);
        cc=unique(cc','rows');
@@ -157,15 +157,14 @@ D9{3}=D3;
   x   = sparse_tucker( D9, BB, para.lambda );
 %  x   = l2_tucker( D9, BB, para.lambda );
 if ismatrix(x)
-    d=ttm(tensor(x),{D1,D2},[1,2]);
+    d=TensorChainProduct(x,{D1,D2},[1,2]);
    d=permute(double(d),[3 1 2]);
-   d=ttm(tensor(d),{phi},1);
+   d=TensorChainProduct(d,{phi},1);
      d=permute(double(d),[2 3 1]);
 else
-d=ttm(tensor(x),{D1,D2,phi},[1,2,3]);
+d=TensorChainProduct(x,{D1,D2,phi},1:3);
 end
-d=double(d);
- Z(:,:,:,gg)=d;
+ Z(:,:,:,gg)=double(d);
 end
 
 EZ = JointBlocks(Z, bparams);
