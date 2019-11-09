@@ -29,6 +29,7 @@ clear
 clc
 addpath(genpath('tensor_toolbox_2.6'))
 addpath(genpath('NLSTF'))
+addpath(genpath('functions'))
 pathstr = fileparts('.\data');
 dirname = fullfile(pathstr, 'data','*.mat');
 imglist = dir(dirname);
