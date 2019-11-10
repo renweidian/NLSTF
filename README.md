@@ -15,7 +15,7 @@ doi={10.1109/CVPR.2017.411},
 ISSN={1063-6919}, 
 month={July},}
 
-@article{8099894, 
+@article{dian2019semi, 
 author={R. {Dian} and L. {Fang} and S. {Li} and T. {Lu} and J. {Bioucas-Dias}}, 
 booktitle={IEEE Transactions on cybernetics}, 
 title={Non-local Sparse Tensor Factorization for Semi-Blind Hyperspectral and Multispectral Image Fusion}, 
