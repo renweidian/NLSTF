@@ -1,6 +1,7 @@
 # NLSTF
 The code is the implention of the following papers <br>
 [1] Renwei Dian,  Leyuan Fang, and Shutao Li, “Hyperspectral image super-resolution via non-local sparse tensor factorization,”  IEEE Conference on Computer Vision and  Pattern Recognition (CVPR), 2017, Honolulu, America.
+
 [2] Renwei Dian, Shutao Li, Leyuan Fang. Ting Lu, and Jose Bioucas-Dias,  Non-local Sparse Tensor Factorization for Semi-Blind Hyperspectral and Multispectral Image Fusion, IEEE TCYB, 2019
 
 If you use this code, please kindly cite the paper: <br>
